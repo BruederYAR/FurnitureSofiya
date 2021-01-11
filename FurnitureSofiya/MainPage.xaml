@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FurnitureSofiya.MainPage"
+             xmlns:pages="clr-namespace:FurnitureSofiya.View"
+             BackgroundColor="#FF8C00">
+    
+    <Shell.Resources>
+        <Style x:Key="TabStyle" TargetType="Element">
+            <Setter Property="Shell.TabBarTitleColor" Value="Black"/>
+            <Setter Property="Shell.TabBarUnselectedColor" Value="#333333"/>
+            <Setter Property="Shell.TitleColor" Value="Black"/>
+        </Style>    
+    </Shell.Resources>
+
+    <TabBar Style="{StaticResource Key=TabStyle}">
+        <Tab Title="Цена" Icon="ShopBascket.png">
+            <ShellContent>
+                <pages:Price/>
+            </ShellContent>
+        </Tab>
+        <Tab Title="Добавить заказ" Icon="ShopBascket.png">
+            <ShellContent>
+                <pages:AddOrder />
+            </ShellContent>
+        </Tab>
+        <Tab Title="Просмотреть заказы" Icon="ShopBascket.png">
+            <ShellContent>
+                <pages:ViewOrder />
+            </ShellContent>
+        </Tab>
+    </TabBar>
+
+</Shell>
